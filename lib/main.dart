@@ -130,12 +130,12 @@ class _PrintersViewState extends State<PrintersView> {
                         children: [
                           MaterialButton(
                             onPressed: () async {
-                              // var image = await PdfGenerator.createPdf() ?? '';
-                              // if(image.isEmpty)return;
-                              // await PrinterManager.printImg(image);
+                              var image = await PdfGenerator.createPdf() ?? '';
+                              if (image.isEmpty) return;
+                              await PrinterManager.printImg(image);
                               // PrinterManager.printImg(imgFile.path);
                               // await OpenFile.open(await PdfGenerator.generatePdfImage());
-                              await PdfGenerator.createPdf();
+                              // await PdfGenerator.createPdf();
                             },
                             color: Colors.lightBlue,
                             child: const Text(
